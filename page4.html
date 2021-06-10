@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 4</title>
+</head>
+<body>
+    
+
+    <div>
+        <h1>
+            Syntax.
+        </h1>
+
+        <p>A programming language's surface form is known as its syntax. Most programming languages are purely textual; they use sequences of text including words, numbers, and punctuation, much like written natural languages. <br> On the other hand, there are some programming languages which are more graphical in nature, using visual relationships between symbols to specify a program.
+            <br><br>
+            The syntax of a language describes the possible combinations of symbols that form a syntactically correct program. The meaning given to a combination of symbols is handled by semantics (either formal or hard-coded in a reference implementation).<br> Since most languages are textual, this article discusses textual syntax.
+            <br><br>
+            Programming language syntax is usually defined using a combination of regular expressions (for lexical structure) and Backus–Naur form (for grammatical structure). Below is a simple grammar, based on Lisp:
+            <ul>
+                <li>
+                    expression ::= atom | list
+                </li>
+
+                <li>
+                    atom::= number | symbol
+                </li>
+                
+                <li>
+                    symbol::= ['A'-'Z''a'-'z'].* 
+                </li>
+                
+                <li>
+                    number::= [+-]?['0'-'9']+
+                </li>
+                
+                <li>
+                    list::= '(' expression* ')'
+                </li>
+
+            </ul>
+
+            <h3>
+                This grammar specifies the following:
+            </h3>
+
+            <ul>
+                <li>
+                    an expression is either an atom or a list;
+                </li>
+
+                <li>
+                    an atom is either a number or a symbol;
+                </li>
+                
+                <li>
+                    a number is an unbroken sequence of one or more decimal digits, optionally preceded by a plus or minus sign; 
+                </li>
+                
+                <li>
+                    a symbol is a letter followed by zero or more of any characters (excluding whitespace);
+                </li>
+                
+                <li>
+                    a list is a matched pair of parentheses, with zero or more expressions inside it.
+                </li>
+
+            </ul>
+
+            Not all syntactically correct programs are semantically correct. Many syntactically correct programs are nonetheless ill-formed, per the language's rules; and may (depending on the language specification and the soundness of the implementation) result in an error on translation or execution.<br>In some cases, such programs may exhibit undefined behavior. Even when a program is well-defined within a language, it may still have a meaning that is not intended by the person who wrote it.
+            <br><br>
+           <b> Using natural language as an example, it may not be possible to assign a meaning to a grammatically correct sentence or the sentence may be false: </b>
+           <br><br>"Colorless green ideas sleep furiously." is grammatically well-formed but has no generally accepted meaning.<br>
+            <br>"John is a married bachelor." is grammatically well-formed but expresses a meaning that cannot be true.<br>
+           <br> <br> The following C language fragment is syntactically correct, but performs operations that are not semantically defined (the operation *p >> 4 has no meaning for a value having a complex type and p->im is not defined because the value of p is the null pointer):<br>
+
+            complex *p = NULL;
+            complex abs_p = sqrt(*p >> 4 + p->im);
+            If the type declaration on the first line were omitted, the program would trigger an error on undefined variable "p" during compilation.<br> However, the program would still be syntactically correct since type declarations provide only semantic information.
+
+        </p>
+        <a href="./page5.html" target="_blank">Page 5</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
